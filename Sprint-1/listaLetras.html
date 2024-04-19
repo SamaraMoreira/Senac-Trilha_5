@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <script>
+            function recebeLetra(listaLetras, letra) {
+            if (listaLetras.length < 10) {
+                listaLetras.push(letra);
+            } else {
+                console.log("limite máximo atingido.");
+            }
+        }
+        function main() {
+            let listaLetras = []; 
+            for (let i = 0; i < 10; i++) {
+                let letra = prompt("Digite uma letra:");
+                recebeLetra(listaLetras, letra); 
+            }
+            console.log("Letras digitadas:", listaLetras.join(", "));
+            console.log("a) A primeira letra digitada:", listaLetras[0]);
+            console.log("b) A quarta letra digitada:", listaLetras[3]);
+            console.log("c) A quinta letra digitada:", listaLetras[4]);
+            console.log("d) A última letra digitada:", listaLetras[listaLetras.length - 1]);
+            console.log("e) O tamanho da lista:", listaLetras.length);
+        }
+
+        main();
+    </script>
+</body>
+</html>

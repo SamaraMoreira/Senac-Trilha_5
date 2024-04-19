@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function promptSimulado(mensagem) {
+        document.write(mensagem + ": ");
+        document.write('<input type="text" id="resposta">');
+        document.write('<button onclick="responder()">OK</button>');
+    }
+
+    function responder() {
+        let idade = parseInt(document.getElementById("resposta").value);
+        let idadeMinima = 16;
+        if (idade >= idadeMinima) {
+            document.write("<br>Você já pode votar!");
+        } else if (idade < idadeMinima) {
+            document.write("<br>Não é permitido votar.");
+        } else {
+            document.write("<br>O voto é opcional.");
+        }
+    }
+    promptSimulado("Digite a sua idade");
+
+    </script>
+</body>
+</html>
